@@ -40,8 +40,6 @@ function render(){
 
 
 
-
-
 function getOrderList() {
     let orderHtml = ''
 
