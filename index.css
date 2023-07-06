@@ -1,0 +1,119 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Smythe', cursive;
+}
+
+/* Layout */
+
+body {
+    height: 1161px;
+    width: 600px;
+    border: 1px black solid;
+}
+header, section {
+    margin: 0 auto;
+}
+
+header {
+    height: 167px;
+    color: whitesmoke;
+}
+
+.food-item-list {
+    border: 1px black solid;
+}
+
+.order-list {
+    border: 1px black solid;
+}
+
+header {
+    background-image: url(images/header-background.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.item {
+    display: flex;
+    width: 600px;
+    position: relative;
+    z-index: 1;
+    padding: 20px 0;
+}
+
+.item::before {
+    content: "";
+    position: absolute;
+    left: 75px;
+    bottom: 0;
+    height: 1px;
+    width: 75%;
+    border-top: 1px solid lightgray;
+}
+
+/* Typography and icons */
+
+h1, h3 {
+    padding-left: 30px;
+    margin: 0;
+}
+
+h1 {
+    padding-top: 50px;
+    padding-bottom: 10px;
+}
+
+h3 {
+    padding-bottom: 30px;
+}
+
+.item-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item-name {
+    font-size: 28px;
+}
+
+.item-ingredients {
+    font-size: 16px;
+    color: #8b8b8b;
+}
+
+.item-price {
+    font-size: 20px;
+}
+
+.item-right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-left: auto;
+}
+
+p, i {
+    margin: 14px 0;
+}
+
+/* Buttons */
+
+.add-btn {
+    margin-right: 60px;
+    border: none;
+    background-color: white;
+    background-image: url(images/plus.png);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    width: 25px;
+    height: 25px;
+}
+
+/* Images */
+
+.item-pic {
+    width: 70px;
+    padding: 0 25px;
+}
