@@ -100,6 +100,14 @@ p, i {
 
 /* Buttons */
 
+button {
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: .5;
+}
+
 .add-btn {
     margin-right: 60px;
     border: none;
