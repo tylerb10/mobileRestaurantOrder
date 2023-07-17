@@ -11,6 +11,7 @@ document.addEventListener('click', function(e){
     }
 })
 
+
 //  Adding the food that is clicked on to the orderItems array
 
 function handleAddClick(foodId){
@@ -24,7 +25,7 @@ function handleAddClick(foodId){
         price: `${targetFoodObj.price}`,
         })
     }
-    return foodId
+    render()
 }
 
 // HTML for menu items
@@ -55,10 +56,10 @@ function getMenuList(){
 
 function getOrderList() {
     let orderHtml = ''
-
     if (orderItems.length > 0) {
        orderItems.forEach(function(item){
         orderHtml +=`
+            <h3 class="your-order">Your Order</h3>
             <div class="order-items">
                 <div class="item-text big-text">
                     <p class="item-name">${item.itemName}</p>
@@ -72,6 +73,8 @@ function getOrderList() {
                 <p class="big-text">Total price:</p>
                 <p class="">ADDED PRICE GOES HERE</p>
             </div>
+            <hr>
+            <button class="complete-order-btn">Complete Order</button>
         `
        })
     }
