@@ -8,6 +8,7 @@ const orderItems = []
 document.addEventListener('click', function(e){
     if(e.target.dataset.menubtn){
         handleAddClick(e.target.dataset.menubtn)
+        document.getElementById('order-feed').innerHTML = getTotalOrder()
     }
 })
 
@@ -54,36 +55,49 @@ function getMenuList(){
 
 // Getting the list of food ordered.
 
-function getOrderList() {
+function getOrderItem() {
     let orderHtml = ''
     if (orderItems.length > 0) {
        orderItems.forEach(function(item){
         orderHtml +=`
-            <h3 class="your-order">Your Order</h3>
             <div class="order-items">
-                <div class="item-text big-text">
-                    <p class="item-name">${item.itemName}</p>
+                <div class="item-text">
+                    <p class="order-name">${item.itemName}</p>
                     <button class="remove-btn">REMOVE</button>
                 </div>
                 <div class="item-right">
                     <p class="item-price">$ ${item.price}</p>
                 </div>
             </div>
-            <div class="total-order">
-                <p class="big-text">Total price:</p>
-                <p class="">ADDED PRICE GOES HERE</p>
-            </div>
-            <hr>
-            <button class="complete-order-btn">Complete Order</button>
-        `
+            `
        })
     }
     return orderHtml
 }
 
+function getTotalOrder() {
+    let orderList = ''
+
+    orderItems.forEach(function(order){
+        orderList += getOrderItem(order)
+    })
+
+    return `
+        <h1 class="your-order">Your Order</h1>
+        <div class="order-list">
+            ${orderList}
+            <div class="order-line"></div>
+            <div class="total-order">
+                <p class="big-text">Total price:</p>
+                <p class="">ADDED PRICE GOES HERE</p>
+            </div>
+            <button class="complete-order-btn">Complete Order</button>
+        </div>
+    `
+}
+
 function render(){
     document.getElementById('feed').innerHTML = getMenuList()
-    document.getElementById('order-feed').innerHTML = getOrderList()
 }
 
 render()

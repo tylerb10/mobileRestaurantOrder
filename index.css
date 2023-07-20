@@ -9,7 +9,7 @@ html, body {
 body {
     height: 1161px;
     width: 600px;
-    border: 1px black solid;
+    border: 1px solid lightgray;
 }
 header, section {
     margin: 0 auto;
@@ -21,11 +21,11 @@ header {
 }
 
 .food-item-list {
-    border: 1px black solid;
+
 }
 
 .order-list {
-    border: 1px black solid;
+    width: 600px;
 }
 
 header {
@@ -50,6 +50,26 @@ header {
     height: 1px;
     width: 75%;
     border-top: 1px solid lightgray;
+}
+
+.order-items {
+    display: flex;
+    padding: 25px;
+}
+
+.item-text {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.order-text {
+    margin-left: 12px;
+    line-height: 5px;
+}
+
+.total-order::before {
+
 }
 
 /* Typography and icons */
@@ -78,6 +98,15 @@ h3 {
     font-size: 28px;
 }
 
+.order-name {
+    font-size: 24px;
+    margin-left: 13px;
+}
+
+.total-order {
+    padding-left: 35px;
+}
+
 .item-ingredients {
     font-size: 16px;
     color: #8b8b8b;
@@ -85,6 +114,7 @@ h3 {
 
 .item-price {
     font-size: 20px;
+    padding-right: 35px;
 }
 
 .item-right {
@@ -96,6 +126,10 @@ h3 {
 
 p, i {
     margin: 14px 0;
+}
+
+.your-order {
+    text-align: center;
 }
 
 /* Buttons */
@@ -117,6 +151,29 @@ button:hover {
     background-position: 50% 50%;
     width: 25px;
     height: 25px;
+}
+
+.remove-btn {
+    border: none;
+    background-color: white;
+    color: #8b8b8b;
+    font-size: 10px;
+}
+
+.complete-order-btn {
+    margin: 0 auto;
+    display: block;
+    padding: 10px 215px;
+    border: none;
+    border-radius: 5px;
+    background-color: #16DB99;
+    color: white;
+    font-weight: bold;
+}
+
+.complete-order-btn:hover {
+    opacity: .8;
+    color: black;
 }
 
 /* Images */
