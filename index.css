@@ -57,19 +57,21 @@ header {
     padding: 25px;
 }
 
-.item-text {
-    display: flex;
-    gap: 20px;
-    align-items: center;
-}
-
 .order-text {
     margin-left: 12px;
     line-height: 5px;
 }
 
-.total-order::before {
+.total-order {
+    display: flex;
+    justify-content: space-between;
+    font-size: 24px
+}
 
+.order-line {
+    border: 1px black solid;
+    width: 89%;
+    margin: auto;
 }
 
 /* Typography and icons */
@@ -126,6 +128,10 @@ h3 {
 
 p, i {
     margin: 14px 0;
+}
+
+.total-price {
+    padding-right: 60px;
 }
 
 .your-order {

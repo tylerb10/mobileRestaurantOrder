@@ -77,9 +77,11 @@ function getOrderItem() {
 
 function getTotalOrder() {
     let orderList = ''
+    let totalPrice = ''
 
     orderItems.forEach(function(order){
         orderList += getOrderItem(order)
+        totalPrice += order.price
     })
 
     return `
@@ -89,7 +91,7 @@ function getTotalOrder() {
             <div class="order-line"></div>
             <div class="total-order">
                 <p class="big-text">Total price:</p>
-                <p class="">ADDED PRICE GOES HERE</p>
+                <p class="total-price">$ ${totalPrice}</p>
             </div>
             <button class="complete-order-btn">Complete Order</button>
         </div>
