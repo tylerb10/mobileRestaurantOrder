@@ -21,12 +21,11 @@ function handleAddClick(foodId){
     })[0]
 
     if(foodId){
-        orderItems.push({
+        orderItems.unshift({
         itemName: `${targetFoodObj.itemName}`,
         price: `${targetFoodObj.price}`,
         })
     }
-    render()
 }
 
 // HTML for menu items
@@ -80,7 +79,7 @@ function getTotalOrder() {
     let totalPrice = ''
 
     orderItems.forEach(function(order){
-        orderList += getOrderItem(order)
+        orderList += getOrderItem()
         totalPrice += order.price
     })
 
